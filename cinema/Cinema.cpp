@@ -1,14 +1,3 @@
-/*Neste programa voc� vai trabalhar com o problema Cinema, na vers�o O(n^4).
-   n = dimens�o da matriz quadrada;  m = n�mero de 0's procurado.
-O algoritmo j� est� quase todo implementado. Faltam apenas alguns detalhes,
-   que voc� deve corrigir.
-a) Observe que a matriz para dado n � criada automaticamente. Observe tamb�m que,
-   a cada quatro testes, a matriz � gerada completamente com 1's.
-b) Inicialmente rode o programa para alguns valores � sua escolha.
-c) Verifique que a sa�da indica apenas a "�rea" m�nima da submatriz procurada e
-   n�o indica a posi��o dessa matriz. Corrija o programa para indicar essa posi��o.
-d) Coloque uma mensagem para quando n�o houver solu��o.
-*/
 #include<iostream>
 #include <iomanip>
 #include<time.h>
