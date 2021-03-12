@@ -1,11 +1,3 @@
-/* Neste programa voc� vai trabalhar com a opera��o de Merge em dois vetores j�
-   ordenados, representando dois conjuntos. Voc� deve obter V3 = V1-V2, ou seja,
-   o conjunto diferen�a entre V1 e V2. A gera��o e a impress�o dos dados j� est�o
-   programados. O valor m�ximo da entrada � 1000.
-   b) Implemente a opera��o de diferen�a.
-   c) Acerte a "pegadinha" na impress�o de V3.
-*/
-
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
