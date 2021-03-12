@@ -1,10 +1,3 @@
-/*Neste programa voc� vai trabalhar com a Pesquisa Bin�ria em um vetor ordenado.
-a) Observe a gera��o dos dados e o algoritmo de Pesquisa Bin�ria.
-b) Implemente a Pesquisa por faixa no vetor, usando a Pesquisa Bin�ria.
-   Note que queremos apenas o n�mero de elementos encontrados.
-   Veja a observa��o que est� descrita no Procedimento BF().
-   Observe que o retorno j� foi programado.
-*/
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
@@ -29,12 +22,7 @@ int PB(int V[], int k)
 
 int BF(int V[], int a, int b){
     int i, ia, ib;
-/*
-   Programa no espa�o a seguir a busca por faixa.
-   A id�ia � encontrar a posi��o do vetor mais pr�xima a a e tamb�m a mais
-   pr�xima a b.  Mas ao obter o retorno de cada busca, voc� deve acertar o
-   valor recebido para que o �ndice se refira ao elemento buscado.
-*/
+
     ia = PB(V, a);
     if( a != V[ia])
     {
@@ -45,11 +33,6 @@ int BF(int V[], int a, int b){
     {
         ib--;
     }
-
-
-/* Esta parte do programa confere o n�mero de elementos encontrados.
-   O aluno n�o deve modificar nada a partir deste ponto.
-*/
     cout<<"Conferencia dos elementos da faixa: ";
     for (i=1; i<=n; i++)
        if (V[i] >=a && V[i] <=b)
