@@ -1,11 +1,3 @@
-/* Voc� vai trabalhar com o algoritmo de ordena��o por Inser��o
-1. Neste primeiro teste voc� vai rodar com um vetor an�logo ao do programa de Sele��o.
-2. 	Primeiramente voc� deve programar o procedimento Insercao().
-3. Anote o total de compara��es para os seguintes valores
-   de n: 10, 100, 1.000, 10.000, 100.000, 1.000.000, 10.000.000 e 100.000.000.
-4. Fa�a a regress�o desses valores usando o site informado pelo professor.
-5. Observe tamb�m o tempo de execu��o para cada situa��o. */
-   
 #include<iostream>
 #include<time.h>
 using namespace std;
