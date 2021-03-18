@@ -1,16 +1,3 @@
-/*Neste programa voc� vai trabalhar com o c�lculo de uma uma Express�o escrita
-na nota��o Polonesa Reversa.
-a) O programa gera uma express�o em nota��o polonesa reversa aleat�ria.
-   Observe que o string gerado tem um branco na primeira posi��o, os operandos
-   cont�m apenas 1 d�gito, os operadores s�o apenas +, - e * e n�o h�
-   brancos no meio do string.
-b) Para facilitar o algoritmo seguinte, j� foi criada a fun��o Resultado.
-c) Voc� deve escrever a fun��o CalcPolRev, cujo algoritmo est� mostrado.
-d) Uma dica para transformar o caracter s[i] no d�gito inteiro d � fazer
-   d = s[i] - '0';
-e) As fun��es esvazia pilha, Push() e POP() devem ser implementadas de forma muito
-    simplificada. Isto �, n�o precisa criar fun��es para isso.
-*/
 #include<iostream>
 #include<string.h>
 #include<stdlib.h>
