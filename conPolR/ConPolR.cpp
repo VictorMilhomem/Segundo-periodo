@@ -1,15 +1,3 @@
-/*Neste programa voc� vai trabalhar com a convers�o de uma Express�o totalmente
-   parentizada, gerada pelo programa, para a nota��o Polonesa Reversa.
-a) Rode o programa como est� e observe a gera��o da express�o totalmente parentizada.
-   Observe que o string gerado tem um branco na primeira posi��o, os operandos
-   cont�m apenas 1 d�gito, os operadores s�o apenas +, - e *, os par�ntesis '(' e ')'
-   est�o corretamente colocados e n�o h� brancos no meio do string.
-b) O string E conter� a express�o parentizada. A posi��o 0 conter� um branco e, no 
-   restante do string n�o haver� brancos. O string R, com o mesmo formato, a convers�o.
-c) Voc� deve escrever a fun��o de convers�o, ConvPolRev, cujo algoritmo est� mostrado.
-d) As fun��es esvazia pilha, Push() e POP() devem ser implementadas de forma muito
-    simplificada. Isto �, n�o precisa criar fun��es para isso.
-*/
 #include<iostream>
 #include<string.h>
 #include <time.h>
