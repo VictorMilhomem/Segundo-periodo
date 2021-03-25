@@ -19,11 +19,11 @@ void Inicializa(){
     int i, j, k, l, p;
     memset(L, '.', sizeof(L));
     f=0;   r=0; 
-    //Cria��o do labirinto
+    //Criação do labirinto
     for (i=1; i<=n; i++){
         L[1][i]=L[n][i]='X';  L[i][1]=L[i][n]='X';
     }
-    //Cria��o de obstaculos
+    //Criação de obstaculos
     for (k=1; k<=n/3-2; k++){
         l= 3*k+1;  i = rand()%(n/2-4)+ 3;
         if (k%2==0) 
@@ -33,7 +33,7 @@ void Inicializa(){
     }
     xi= n/2; yi = rand()%(n-2)+2;  xf = rand()%(n-2)+2;  yf = n;
     L[xi][yi] = 'I';  L[xf][yf]='S';
-    //Impress�o inicial do labirinto
+    //Impressão inicial do labirinto
     ImprimeL();  
 }
 
@@ -70,7 +70,7 @@ int i, j, xat, yat, dat, pat;
     
     while(pat != 0){
 		CM[++tcm] = Q[pat];
-		//*****************Coloca * no caminho m�nimo******************
+		//*****************Coloca * no caminho mínimo******************
         L[Q[pat].x][Q[pat].y] = '*';
 		pat = Q[pat].p;  
     }
@@ -83,10 +83,10 @@ int main(){
     	Inicializa();
     	CaminhoMinimo();
 		cout<<endl<<"Solucao do labirinto:"<<endl;
-        //********************Imprime a solu��o**************************
+        //********************Imprime a solução**************************
         ImprimeL();
         cout<<endl<<"Tamanho do Caminho minimo:"<<tamanho<<endl;
-        //********************Imprime o tamanho do caminho m�nimo********      
+        //********************Imprime o tamanho do caminho mínimo********      
 		cin.get();
     }
     return 0;
