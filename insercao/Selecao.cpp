@@ -1,12 +1,3 @@
-/* Neste programa você trabalhará com o programa de ordenação por Seleção
-1. Observe a criação do Vetor V. A primeira metade contem os números pares de 1 a n
-   e a segunda metade, os ímpares, quando p n é par.
-2. Observe que o programa imprime o total de comparações feitas.
-3. Anote o total de comparações para os seguintes valores
-   de n: 10, 100, 1.000, 10.000, 100.000, 1.000.000, 10.000.000 e 100.000.000.
-4. Faça a regressão desses valores usando o site informado pelo professor.
-5. Observe também o tempo de execução para cada situação. */
-   
 #include<iostream>
 using namespace std;
 
@@ -21,15 +12,6 @@ void Imprime(string s, int V[], int n)
 
 long long int Selecao(int V[], int n){
     int i, m, j, t; long long int comp = 0;   
-/*  para i <- 1 até n-1 inclusive:
-        m <- i
-        para j <- i+1 até n inclusive
-            se (V[j] < V[m]):
-			    m <- j
-			comp++
-        t <- V[i];  V[i] <- V[m];  V[m] <- t;
-    retornar comp
-*/
     for (i=1; i<= n-1; i++){
         m = i;
         for (j=i+1; j<=n; j++){
