@@ -70,7 +70,7 @@ int i, j, xat, yat, dat, pat;
     
     while(pat != 0){
 		CM[++tcm] = Q[pat];
-		//*****************Coloca * no caminho mínimo******************
+		//*****************Coloca * no caminho mínimo****************
         L[Q[pat].x][Q[pat].y] = '*';
 		pat = Q[pat].p;  
     }
