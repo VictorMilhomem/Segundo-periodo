@@ -4,7 +4,7 @@
 #include<time.h>
 using namespace std;
 
-int n, xi, yi, xf, yf, f, r, d, ff, tcm, tamanho;
+int n, xi, yi, xf, yf, f, r, d, ff, tcm;
 char L[101][101];
 struct {int x,y,d,p;} Q[10000], CM[200];
 
@@ -74,7 +74,6 @@ int i, j, xat, yat, dat, pat;
         L[Q[pat].x][Q[pat].y] = '*';
 		pat = Q[pat].p;  
     }
-    tamanho = tcm;
 }
 int main(){
 	srand(time(NULL));
@@ -85,7 +84,7 @@ int main(){
 		cout<<endl<<"Solucao do labirinto:"<<endl;
         //********************Imprime a solução**************************
         ImprimeL();
-        cout<<endl<<"Tamanho do Caminho minimo:"<<tamanho<<endl;
+        cout<<endl<<"Tamanho do Caminho minimo:"<<tcm<<endl;
         //********************Imprime o tamanho do caminho mínimo********      
 		cin.get();
     }
