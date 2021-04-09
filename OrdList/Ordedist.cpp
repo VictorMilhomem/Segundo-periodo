@@ -1,11 +1,3 @@
-/*Ordena��o por Distribui��o
-1. Observe os algoritmos de tratamento das filas.
-2. Observe que o algoritmo executa sempre 10 passos de ordena��o, mesmo que
-   o maior n�mero seja pequeno.
-3. Corrija o programa para s� fazer o n�mero de passos necess�rio.
-4. Rode o programa para n = 10, 100, 1.000, 10.000, 100.000, 1.000.000, 10.000.000 e anote,
-   qualitativamente os tempos de execu��o.
-*/
 #include<iostream>
 #include<stdlib.h>
 #include<ctime>
