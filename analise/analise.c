@@ -46,7 +46,7 @@ void ler(char* arq)
                 contChar++;
             }
             
-            if (c >= 32 && c <= 255) // primeiro e ultimo na tabela ascii
+            if (c >= 32 && c <= 255) // primeiro e ultimo na tabela ascii imprimiveis
                 contImp++;
         }
 
