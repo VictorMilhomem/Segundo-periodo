@@ -1,4 +1,4 @@
-#Exercício 5.3 - Produto Escalar
+Exercício 5.3 - Produto Escalar
     Escreva um programa organizado em múltiplos arquivos que calcule de forma recursiva o produto escalar entre dois vetores. Os vetores devem ser lidos a partir de arquivos de texto e terão no máximo 50 elementos.
 
     No caso dos vetores terem tamanho diferente seu programa deve apresentar a mensagem de erro "Erro: os vetores possuem comprimentos distintos\n". No caso do primeiro arquivo ser inexistente, seu programa deve imprimir "Erro: arquivo do vetor 1 não foi encontrado\n". Uma mensagem análoga deve ser emitida no caso de erro com o vetor 2.
