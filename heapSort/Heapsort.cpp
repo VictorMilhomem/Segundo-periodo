@@ -1,7 +1,7 @@
-/*Voc� vai trabalhar com o m�todo de ordena��o Heapsort.
+/*Voce vai trabalhar com o m�todo de ordenação Heapsort.
   1. Implemente o Heapsort.
   2. Rode o  programa para n= 10, 100, 1000, 10000, 100000, 1000000, 10000000
-     e obtenha a aproxima��o da complexidade do n�mero de compara��es
+     e obtenha a aproximaximação da complexidade do numero de comparações
      pelo site planetcalc (https://pt.planetcalc.com/5992/), anotando abaixo:
      a) Resumo dado pelo programa:
      n = 10 Total de comparacoes: 39
@@ -12,7 +12,7 @@
      n = 1000000 Total de comparacoes: 36444599
      n = 10000000 Total de comparacoes: 431147879     
      
-     b) Melhor fun��o do planetcalc
+     b) Melhor função do planetcalc
         y=4.1351x^1.1616
      
 */
@@ -59,14 +59,6 @@ int main(){
         for (i=1; i<=n; i++) H[i] = (rand()%n*rand()%n)%n;
         ImprimeVetor(1,n);
         comp = 0;
-
-        /* Heapsort:  */
-        /*	para i <- n/2..1 incl.:
-            	DesceHeap(i, n, comp)
-         	para i <- 1..n-1 incl.:
-            	Troca(1, n-i+1)
-             	DesceHeap(1,n-i, comp)
-        */
         for (int i = n/2; i >= 1; i--)
             DesceHeap(i, n, comp);
         for (int i = 1; i < n; i++){
