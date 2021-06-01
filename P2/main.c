@@ -1,25 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define MAX 10001
 
-char palavra[256];
 
+// lista encadeada
 typedef struct No{
     int chave;
+    int valor;
     struct No* prox;
 }No;
 
+// listas encadeadas
+No *cabeca = NULL;
 
-void ler(char*);
+
+// prototipos das funções
+void ler(char* arq, char *palavra);
+void procura(FILE *arq, char *palavra);
 
 int main()
 {
     int n = 0;
     char str;
     char* arquivo = malloc(n * sizeof(char));
+    char* palavra;
+    char *ptr;
 
-    fgets(palavra, 256, stdin);
-    palavra[strlen(palavra)] = '\0';
+
+    //fgets(palavra, 256, stdin);
+    //palavra[strlen(palavra)] = '\0';
 
     while ((str = getchar()) != '\n' && str != EOF)
     {
@@ -27,21 +37,21 @@ int main()
         arquivo[n-1] = str;
     }
     arquivo[n] = '\0';
-    ler(arquivo);
+
+    palavra = strtok(arquivo, " ");
+    ptr = strtok(NULL, " ");
+
+    //printf("%s %s\n", palavra, ptr);
+
+    ler(ptr, palavra);
 
     free(arquivo);
     return 0;
 }
 
 
-void ler(char* arq)
+void ler(char* arq, char *palavra)
 {
-    int contLin = 0;
-    char c; char *tmp;
-
-    size_t MAXLINE = 10001;
-    tmp = malloc(MAXLINE * sizeof(tmp));
-    No lista;
 
     FILE *fp;
     if ((fp = fopen(arq, "r")) == NULL)
@@ -52,24 +62,73 @@ void ler(char* arq)
     else
     {
         fp = fopen(arq, "r");
-        while (getline(&tmp, &MAXLINE, fp) > 0)
-        {
+        procura(fp, palavra);
+    }
+    fclose(fp);
+}
 
-            if (strstr(tmp, palavra) == 0)
-            {
-                // adicionar a lista encadeada o numero da linha
-                printf("%d\n", contLin);
-                //printf("Achei");
-                contLin++;
-            }
+void inserir(int chave, int valor)
+{
+    No *temp = malloc(sizeof(temp));
 
-            
-        }
+    temp->chave = chave;
+    temp->valor = valor;
 
+    temp->prox = cabeca;
+    cabeca = temp;
+}
+
+No *deletar()
+{
+    No *temp = cabeca;
+
+    cabeca = cabeca->prox;
+
+    return temp;
+}
+
+int listaVazia()
+{
+    return cabeca == NULL;
+}
+
+void imprimeLista()
+{
+    No *pont = cabeca;
+    while(pont != NULL)
+    {
+        printf("%d\n", pont->valor);
+        pont = pont->prox;
     }
 }
 
-void procura(char *palavra)
+
+void procura(FILE *arq, char *palavra)
 {
+    int contLin = 0;
+    char c; char str[MAX]; char *pos;
+    int chave = 0;
+
+    while (fgets(str, MAX, arq) != NULL)
+    {
+        contLin += 1;
+        pos = strstr(str, palavra);
+        if (pos != NULL)
+        {
+            // adicionar a lista encadeada o numero da linha
+            inserir(chave, contLin);
+
+            chave++;
+            //printf("%d\n", contLin);
+            //printf("Achei");
+        }
+        
+    }
+    imprimeLista();
+
+    while(!listaVazia())
+    {
+        No *temp = deletar();
+    }
 
 }
